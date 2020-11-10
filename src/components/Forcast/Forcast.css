@@ -1,0 +1,15 @@
+.forcast-container {
+    background-color:white;
+    color: var(--secondary-text);
+    position: relative;
+}
+
+.forcast-wrapper {
+    display: flex; 
+    text-align: center;
+    flex-basis: 0;
+}
+
+.forcast-title {
+    padding: 10px 30px;
+}

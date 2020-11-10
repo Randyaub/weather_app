@@ -1,0 +1,18 @@
+.search {
+    color: #ccd3db; 
+    outline: none;
+    border: none;
+    border-bottom: 2px solid #ccd3db;
+    padding: 5px;
+    background: transparent;
+}
+
+.search::placeholder {
+    color: #ccd3db; 
+}
+
+.search-icon {
+    position: relative ;
+    right: 20px;
+    color: var(--third-color);
+}

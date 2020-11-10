@@ -1,0 +1,23 @@
+.weather-details {
+  width: 25%;
+  margin-bottom: 15px;
+}
+
+.weather-details .units {
+  line-height: 11px;
+  margin-top: 4px;
+  display: flex;
+  flex-direction: column;
+  font-size: 10px;
+}
+
+.weather-details .label {
+  font-size: 14px;
+  display: block;
+}
+
+.weather-details .value {
+  font-size: 22px;
+  float: left;
+  margin-right: 3px;
+}
