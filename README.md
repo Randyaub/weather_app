@@ -2,7 +2,7 @@
 
 This project retrieves data from the OpenWeatherMap API and displays the information in a pleasing way.
 
-[The Website Link](https://app.netlify.com/sites/naughty-hugle-69c260/overview)
+[The Website Link](https://naughty-hugle-69c260.netlify.app/)
 
 ## Motivation
 
