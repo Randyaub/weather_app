@@ -1,5 +1,5 @@
 .main-container {
-  background: linear-gradient(to top,rgba(0,0,0,0),rgba(0,0,0,0.5));
+  background: linear-gradient(to top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5));
   padding: 10px 30px;
   height: 200px;
 }
@@ -18,9 +18,9 @@
 .container-wrapper {
   margin: 0 auto;
   width: 700px;
-  -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
-  -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
-  box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+  -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
 }
 
 .news-content {
@@ -64,7 +64,7 @@ footer {
   color: #facf74;
 }
 
-.search-help:hover + .search-box{
+.search-help:hover + .search-box {
   opacity: 100;
   visibility: visible;
   transition: 0.1s ease-in;
@@ -90,7 +90,7 @@ footer {
 .carrot-up {
   position: absolute;
   font-size: 40px;
-  color:  #eeeeee;
+  color: #eeeeee;
   right: -5px;
   top: -1px;
 }
@@ -107,15 +107,14 @@ footer {
   margin: 18px auto;
   width: 700px;
   height: 70px;
-  padding-left: 20px
-
+  padding-left: 20px;
 }
 
 .website-logo {
   width: 200px;
 }
 
-.main-container.loading {
+.loading {
   display: flex;
   justify-content: center;
   align-self: center;
@@ -126,11 +125,11 @@ footer {
   display: flex;
   justify-content: center;
   align-self: center;
-  background-color: rgba(255,255,255,0.6);
+  background-color: rgba(255, 255, 255, 0.6);
 }
 
 .openweather-link {
-  color: var(--third-color)
+  color: var(--third-color);
 }
 
 .search-error {
