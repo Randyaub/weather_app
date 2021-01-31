@@ -1,17 +1,17 @@
 import React from "react";
-import "./WeatherDetails.css";
+import "./Temperature.css";
 
 const Temperature = (props) => {
   return (
     <>
       <div className="c-Temperature">
-        <div className="c-Temperature__temp">
-          <span className="wd-temperature">{props.temperature}</span>
-          <div>
-            <div className="wd-unit-wrap">
-              <span className="wd-temp-unit">°C</span>
+        <div className="l-Temperature__temp">
+          <span className="c-Temperature__temp">{props.temperature}</span>
+          <div className="c-Temperature__details">
+            <div className="l-Temperature__unit">
+              <span className="c-Temperature__unit">°C</span>
             </div>
-            <p className="wd-feels-like">
+            <p className="c-Temperature__feels">
               <span className="label">FEELS LIKE</span>
               <span className="value">{props.feels_like}</span>
             </p>

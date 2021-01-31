@@ -4,34 +4,38 @@
   margin-top: 10px;
 }
 
-.c-Temperature__temp {
+.l-Temperature__temp {
   display: flex;
 }
 
-.wd-temperature {
-  font-size: 56px;
+.c-Temperature__details {
+  margin-left: 5px;
+}
+
+.c-Temperature__temp {
+  font-size: 58px;
   font-style: bold;
   color: var(--third-color);
 }
 
-.wd-unit-wrap {
-  margin-top: 15px;
+.l-Temperature__unit {
+  margin-top: 14px;
 }
 
-.wd-temp-unit {
+.c-Temperature__unit {
   font-size: 18px;
   color: var(--third-color);
 }
 
-.wd-feels-like .label {
+.c-Temperature__feels .label {
   display: inline-block;
-  width: 30px;
+  width: 25px;
   font-size: 9px;
   text-align: right;
   margin: 0px 6px 0px 0px;
 }
 
-.wd-feels-like .value {
+.c-Temperature__feels .value {
   margin-bottom: 5px;
   font-size: 23px;
 }
