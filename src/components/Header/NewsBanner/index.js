@@ -6,7 +6,8 @@ const NewsBanner = () => {
     <div className="c-NewsBanner">
       <div className="c-NewsBanner__content">
         <h6 className="c-NewsBanner__message">
-          Weather Data provided for you!
+          Hover the question mark icon to the right of the search bar for more
+          information.
         </h6>
       </div>
     </div>

@@ -21,3 +21,7 @@ body {
   background: var(--primary-color);
   color: white;
 }
+
+.link {
+  color: var(--third-color);
+}

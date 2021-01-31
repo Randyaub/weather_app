@@ -1,3 +1,7 @@
+.c-SearchHelpIcon {
+  position: relative;
+}
+
 .c-SearchHelpIcon__popup {
   position: relative;
   opacity: 0;
@@ -8,6 +12,7 @@
   color: var(--third-color);
   position: relative;
   top: 2.5px;
+  transform: scale(1.1);
 }
 
 .c-SearchHelpIcon__icon:hover {

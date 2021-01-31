@@ -1,7 +1,7 @@
 .l-App__current {
   margin: 0 auto;
   width: 700px;
-  height: 270px;
+
   -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
   box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
@@ -10,38 +10,15 @@
 .l-App__forcast {
   margin: 0 auto;
   width: 700px;
-  height: 625px;
   -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
   box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
 }
 
-footer {
-  margin: 30px 0px 0px 0px;
-  background-color: var(--secondary-color);
-  padding: 10px 10px;
-  text-align: center;
-}
-
-.footer-content {
-  padding-top: 3px;
-  margin: 0 auto;
-  width: 700px;
-}
-
 .App {
   height: 100vh;
+  width: 100vw;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-}
-
-.title {
-  display: inline;
-  font-size: 36px;
-  margin-left: 20px;
-}
-
-.link {
-  color: var(--third-color);
 }
