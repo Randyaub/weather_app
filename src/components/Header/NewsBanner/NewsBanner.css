@@ -1,0 +1,14 @@
+.c-NewsBanner {
+  background-color: var(--secondary-color);
+}
+
+.c-NewsBanner__content {
+  margin: 0 auto;
+  width: 700px;
+}
+
+.c-NewsBanner__message {
+  padding: 5px 0px;
+  font-size: 13px;
+  font-weight: 500;
+}

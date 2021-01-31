@@ -6,6 +6,7 @@ import Search from "./components/Search/Search";
 import WeatherCurrently from "./components/WeatherCurrently/WeatherCurrently";
 import Forcast from "./components/Forcast/Forcast";
 import Footer from "./components/Footer";
+import Header from "./components/Header";
 
 const App = () => {
   const [currentWeather, setCurrentWeather] = useState({});
@@ -66,19 +67,8 @@ const App = () => {
   return (
     <>
       <div className="App">
-        <div className="content">
-          <div className="news-banner">
-            <div className="news-content">
-              <h6 className="news-blurb">Weather Data provided for you!</h6>
-            </div>
-          </div>
-          <div className="title-section">
-            <img
-              className="website-logo"
-              src="weather-logo.png"
-              alt="logo"
-            ></img>
-          </div>
+        <div className="container">
+          <Header />
           <div className="container-wrapper">
             <div className="nav">
               <Search
@@ -106,12 +96,15 @@ const App = () => {
               currentWeather={currentWeather}
               loadingCurrent={loadingCurrent}
               loadingForcast={loadingForcast}
-              currentWeather={currentWeather}
             />
           </div>
           <br />
           <div className="container-wrapper">
-            <Forcast fiveDayForcast={fiveDayForcast} />
+            <Forcast
+              fiveDayForcast={fiveDayForcast}
+              loadingCurrent={loadingCurrent}
+              loadingForcast={loadingForcast}
+            />
           </div>
         </div>
         <Footer />

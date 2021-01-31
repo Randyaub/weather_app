@@ -1,0 +1,12 @@
+.c-Logo {
+  display: flex;
+  align-items: center;
+  margin: 18px auto;
+  width: 700px;
+  height: 70px;
+  padding-left: 20px;
+}
+
+.c-Logo__image {
+  width: 200px;
+}
