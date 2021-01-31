@@ -1,6 +1,6 @@
 # Weather-App
 
-The Weather-App project requests data from the OpenWeatherMap's API and displays the response data in a visaully pleasing way. The website is called the Weather App, However the website doesnt work on phones like an app implies. I didnt add responsivness because I wanted to replicated a design that wasnt intended to be resized.
+The Weather-App project requests data from the OpenWeatherMap's API and displays the response data in a visaully pleasing way. The website is called the Weather App. However, the website doesnt work on phones like an app implies. I didnt add responsivness because I wanted to replicated a design that wasnt intended to be resized.
 
 [Link To Weather-App Site](https://naughty-hugle-69c260.netlify.app/)
 
