@@ -2,8 +2,11 @@ import React from "react";
 import axios from "axios";
 
 import "./Search.css";
+import SearchInput from "./SearchInput";
+import SearchHelpIcon from "./SearchHelpIcon";
+import SearchError from "./SearchError";
 
-const Search = (props) => {
+const SearchBar = (props) => {
   const search = (evt) => {
     if (evt.key === "Enter") {
       axios
@@ -38,23 +41,18 @@ const Search = (props) => {
   };
 
   return (
-    <div>
-      <input
-        type="text"
-        placeholder="Search for location..."
-        onChange={(e) => props.setQuery(e.target.value)}
-        value={props.query}
-        onKeyPress={search}
-        className="search"
-      />
-      <i className="fas fa-search search-icon"></i>
-      {props.validSearch === false ? (
-        <h3 className="search-error">Please type the location again...</h3>
-      ) : (
-        ""
-      )}
+    <div className="c-SearchBar">
+      <div className="c-SearchBar__search">
+        <SearchInput
+          search={search}
+          query={props.query}
+          setQuery={props.setQuery}
+        />
+        {!props.validSearch && <SearchError />}
+      </div>
+      <SearchHelpIcon />
     </div>
   );
 };
 
-export default Search;
+export default SearchBar;

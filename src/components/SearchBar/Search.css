@@ -1,0 +1,6 @@
+.c-SearchBar {
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--secondary-color);
+  padding: 10px 10px;
+}

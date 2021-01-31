@@ -2,11 +2,11 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import "./App.css";
 
-import Search from "./components/Search/Search";
 import WeatherCurrently from "./components/WeatherCurrently/WeatherCurrently";
 import Forcast from "./components/Forcast/Forcast";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
+import SearchBar from "./components/SearchBar/Search";
 
 const App = () => {
   const [currentWeather, setCurrentWeather] = useState({});
@@ -67,31 +67,19 @@ const App = () => {
   return (
     <>
       <div className="App">
-        <div className="container">
+        <div>
           <Header />
           <div className="container-wrapper">
-            <div className="nav">
-              <Search
-                setCurrentWeather={setCurrentWeather}
-                setFiveDayForcast={setFiveDayForcast}
-                setQuery={setQuery}
-                query={query}
-                setCurrentLoading={setCurrentLoading}
-                setForcastLoading={setForcastLoading}
-                setValidSearch={setValidSearch}
-                validSearch={validSearch}
-              />
-              <div>
-                <i className="fas fa-question-circle search-help"></i>
-                <div className="search-box">
-                  <i className="fas fa-sort-up carrot-up"></i>
-                  <p className="search-helper">
-                    The search format is as follows... (city, country code) Ex.
-                    Calgary, CA
-                  </p>
-                </div>
-              </div>
-            </div>
+            <SearchBar
+              setCurrentWeather={setCurrentWeather}
+              setFiveDayForcast={setFiveDayForcast}
+              setQuery={setQuery}
+              query={query}
+              setCurrentLoading={setCurrentLoading}
+              setForcastLoading={setForcastLoading}
+              setValidSearch={setValidSearch}
+              validSearch={validSearch}
+            />
             <WeatherCurrently
               currentWeather={currentWeather}
               loadingCurrent={loadingCurrent}

@@ -1,0 +1,40 @@
+.c-SearchHelpIcon__popup {
+  position: relative;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.c-SearchHelpIcon__icon {
+  color: var(--third-color);
+  position: relative;
+  top: 2.5px;
+}
+
+.c-SearchHelpIcon__icon:hover {
+  color: #facf74;
+}
+
+.c-SearchHelpIcon__icon:hover + .c-SearchHelpIcon__popup {
+  opacity: 100;
+  visibility: visible;
+  transition: 0.1s ease-in;
+}
+
+.c-SearchHelpIcon__popup > p {
+  color: var(--secondary-text);
+  border-radius: 6px;
+  padding: 8px 12px;
+  position: absolute;
+  background-color: #eeeeee;
+  width: 260px;
+  right: -7px;
+  top: 11px;
+}
+
+.c-SearchHelpIcon__popup > i {
+  position: absolute;
+  font-size: 40px;
+  color: #eeeeee;
+  right: -5px;
+  top: -1px;
+}
