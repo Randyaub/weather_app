@@ -1,6 +1,7 @@
 .c-SearchError {
   position: relative;
   top: 3px;
-  font-size: 16px;
+  font-size: 18px;
   transition: 0.1s ease-in;
+  color: var(--third-color);
 }

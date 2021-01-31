@@ -15,8 +15,7 @@ const Forcast = (props) => {
   ];
 
   return (
-    props.loadingCurrent === false &&
-    props.loadingForcast === false &&
+    props.isLoading === false &&
     typeof props.fiveDayForcast[0] != "undefined" && (
       <section className="c-Forcast">
         <h4 className="c-Forcast__title">Next 5 Days</h4>

@@ -13,6 +13,13 @@
 
 .c-SearchInput__icon {
   position: relative;
-  right: 20px;
+  right: 25px;
   color: var(--third-color);
+  cursor: pointer;
+  padding: 5px;
+  z-index: 100;
+}
+
+.c-SearchInput__icon:hover {
+  color: #facf74;
 }

@@ -7,8 +7,7 @@ import TodaysWeatherDetails from "./TodaysWeatherDetails";
 
 const TodaysWeather = (props) => {
   return (
-    props.loadingCurrent === false &&
-    props.loadingForcast === false &&
+    props.isLoading === false &&
     typeof props.currentWeather.main != "undefined" && (
       <section className="c-TodaysWeather">
         <div>

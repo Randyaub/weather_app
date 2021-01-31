@@ -10,9 +10,8 @@ const SearchInput = (props) => {
         placeholder="Search for location..."
         onChange={(e) => props.setQuery(e.target.value)}
         value={props.query}
-        onKeyPress={props.search}
       />
-      <i className="fas fa-search c-SearchInput__icon"></i>
+      <i className="fas fa-search c-SearchInput__icon" onClick={props.search} />
     </span>
   );
 };

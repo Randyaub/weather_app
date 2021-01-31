@@ -1,7 +1,7 @@
 import React from "react";
 import "./SearchHelpIcon.css";
 
-const SearchHelpIcon = () => {
+const SearchHelpIcon = (props) => {
   return (
     <div className="c-SearchHelpIcon">
       <i className="c-SearchHelpIcon__icon fas fa-question-circle"></i>

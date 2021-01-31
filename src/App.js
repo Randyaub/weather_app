@@ -7,17 +7,17 @@ import Forcast from "./components/Forcast";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
 import Loading from "./components/Loading";
-import SearchBar from "./components/SearchBar/Search";
+import SearchBar from "./components/SearchBar";
 
 const App = () => {
   const [currentWeather, setCurrentWeather] = useState({});
   const [fiveDayForcast, setFiveDayForcast] = useState({});
   const [query, setQuery] = useState("");
-  const [loadingCurrent, setCurrentLoading] = useState(true);
-  const [loadingForcast, setForcastLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState(true);
   const [validSearch, setValidSearch] = useState(true);
 
   useEffect(() => {
+    setIsLoading(true);
     navigator.geolocation.getCurrentPosition(
       async (position) => {
         const { latitude, longitude } = position.coords;
@@ -42,22 +42,20 @@ const App = () => {
     //otherwise default to calgary
     axios.get(currentWeatherURL).then((result) => {
       setCurrentWeather(result.data);
-      setCurrentLoading(false);
+      axios
+        .get(
+          `${process.env.REACT_APP_API_BASE}forecast?q=calgary&units=metric&appid=${process.env.REACT_APP_API_KEY}`
+        )
+        .then((result) => {
+          setFiveDayForcast(result.data.list);
+          setIsLoading(false);
+        });
     });
-
-    axios
-      .get(
-        `${process.env.REACT_APP_API_BASE}forecast?q=calgary&units=metric&appid=${process.env.REACT_APP_API_KEY}`
-      )
-      .then((result) => {
-        setFiveDayForcast(result.data.list);
-        setForcastLoading(false);
-      });
   };
 
   return (
     <>
-      {loadingCurrent === false && loadingForcast === false ? (
+      {isLoading === false ? (
         <div className="App">
           <div>
             <Header />
@@ -67,24 +65,18 @@ const App = () => {
                 setFiveDayForcast={setFiveDayForcast}
                 setQuery={setQuery}
                 query={query}
-                setCurrentLoading={setCurrentLoading}
-                setForcastLoading={setForcastLoading}
+                setIsLoading={setIsLoading}
                 setValidSearch={setValidSearch}
                 validSearch={validSearch}
               />
               <TodaysWeather
                 currentWeather={currentWeather}
-                loadingCurrent={loadingCurrent}
-                loadingForcast={loadingForcast}
+                isLoading={isLoading}
               />
             </div>
             <br />
             <div className="l-App__forcast">
-              <Forcast
-                fiveDayForcast={fiveDayForcast}
-                loadingCurrent={loadingCurrent}
-                loadingForcast={loadingForcast}
-              />
+              <Forcast fiveDayForcast={fiveDayForcast} isLoading={isLoading} />
             </div>
           </div>
           <Footer />

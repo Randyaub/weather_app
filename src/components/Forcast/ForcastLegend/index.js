@@ -15,7 +15,7 @@ const ForcastLegend = () => {
   return (
     <div className="c-ForcastLegend">
       {rowContents.map((content, index) => {
-        return <LegendRow name={content} />;
+        return <LegendRow key={index} name={content} />;
       })}
     </div>
   );

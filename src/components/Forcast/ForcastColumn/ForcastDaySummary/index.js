@@ -20,7 +20,7 @@ const ForcastDaySummary = (props) => {
           )}
         </h5>
       </div>
-      <div>
+      <div className="c-ForcastDaySummary__image">
         <ForcastImage
           url={`http://openweathermap.org/img/wn/${props.day.weather[0].icon}@2x.png`}
         />
