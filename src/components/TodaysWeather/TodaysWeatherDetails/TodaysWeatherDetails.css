@@ -1,0 +1,5 @@
+.c-TodaysWeatherDetails {
+  display: flex;
+  flex-flow: wrap;
+  flex: 1.3;
+}

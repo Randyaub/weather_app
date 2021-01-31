@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import "./App.css";
 
-import WeatherCurrently from "./components/WeatherCurrently/WeatherCurrently";
+import TodaysWeather from "./components/TodaysWeather";
 import Forcast from "./components/Forcast/Forcast";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
@@ -80,7 +80,7 @@ const App = () => {
               setValidSearch={setValidSearch}
               validSearch={validSearch}
             />
-            <WeatherCurrently
+            <TodaysWeather
               currentWeather={currentWeather}
               loadingCurrent={loadingCurrent}
               loadingForcast={loadingForcast}

@@ -1,0 +1,9 @@
+.c-TodaysWeather {
+  background: linear-gradient(to top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5));
+  padding: 10px 30px;
+  height: 200px;
+}
+
+.l-TodaysWeather {
+  display: flex;
+}
