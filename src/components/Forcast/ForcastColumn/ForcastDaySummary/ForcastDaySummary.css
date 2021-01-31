@@ -1,0 +1,43 @@
+.c-ForcastDaySummary {
+  border-bottom: 1px solid #d4d7d8;
+}
+
+.c-ForcastDaySummary__row {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  position: relative;
+}
+
+.c-ForcastDaySummary__description {
+  font-weight: 400;
+}
+
+.c-ForcastDaySummary .temperature {
+  display: inline-block;
+  font-weight: 600;
+  font-size: 28px;
+  padding-bottom: 10px;
+}
+
+.c-ForcastDaySummary .unit {
+  position: absolute;
+  top: 5px;
+}
+
+.c-ForcastDaySummary__date {
+  display: block;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.c-ForcastDaySummary__day {
+  display: inline-block;
+  font-size: 18px;
+  font-weight: 600;
+  margin-top: 5px;
+}
+
+.c-ForcastDaySummary__image {
+  width: 139px;
+  height: 84px;
+}

@@ -1,0 +1,6 @@
+.c-ForcastColumn {
+  flex-grow: 1;
+  flex-basis: 0;
+  border-right: 1px solid#d4d7d8;
+  background-color: #eeeeee;
+}

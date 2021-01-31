@@ -1,0 +1,6 @@
+.c-ForcastImage {
+  margin: 20px 0px 0px;
+  width: 60px;
+  background-color: var(--primary-color);
+  border-radius: 100px;
+}

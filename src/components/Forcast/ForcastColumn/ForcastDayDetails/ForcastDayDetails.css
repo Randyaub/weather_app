@@ -1,0 +1,10 @@
+.c-ForcastDayDetails {
+  position: relative;
+  padding: 15px 0px;
+  font-size: 22px;
+  font-weight: 500;
+}
+
+.c-ForcastDayDetails:nth-child(2n - 1) {
+  background-color: #e4e4e4;
+}

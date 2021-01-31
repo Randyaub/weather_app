@@ -1,0 +1,10 @@
+.c-ForcastLegend {
+  position: absolute;
+  bottom: 0px;
+  left: -112px;
+  color: white;
+  text-align: right;
+  -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.15);
+  box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.15);
+}
