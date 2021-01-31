@@ -5,6 +5,7 @@ import "./App.css";
 import Search from "./components/Search/Search";
 import WeatherCurrently from "./components/WeatherCurrently/WeatherCurrently";
 import Forcast from "./components/Forcast/Forcast";
+import Footer from "./components/Footer";
 
 const App = () => {
   const [currentWeather, setCurrentWeather] = useState({});
@@ -15,52 +16,51 @@ const App = () => {
   const [validSearch, setValidSearch] = useState(true);
 
   useEffect(() => {
-    navigator.geolocation.getCurrentPosition(
-      async (position) => {
-        const { latitude, longitude } = position.coords;
-        //Sets to users location
-        axios
-          .get(
-            `${process.env.REACT_APP_API_BASE}weather?lat=${latitude}&lon=${longitude}&units=metric&appid=${process.env.REACT_APP_API_KEY}`
-          )
-          .then((result) => {
-            setCurrentWeather(result.data);
-            setCurrentLoading(false);
-          })
-          .catch((err) => {});
-        axios
-          .get(
-            `${process.env.REACT_APP_API_BASE}forecast?lat=${latitude}&lon=${longitude}&units=metric&appid=${process.env.REACT_APP_API_KEY}`
-          )
-          .then((result) => {
-            setFiveDayForcast(result.data.list);
-            setForcastLoading(false);
-          })
-          .catch((err) => {});
-      },
-      (err) => {
-        //otherwise default to calgary
-        axios
-          .get(
-            `${process.env.REACT_APP_API_BASE}weather?q=calgary&units=metric&appid=${process.env.REACT_APP_API_KEY}`
-          )
-          .then((result) => {
-            setCurrentWeather(result.data);
-            setCurrentLoading(false);
-          })
-          .catch((err) => {});
-
-        axios
-          .get(
-            `${process.env.REACT_APP_API_BASE}forecast?q=calgary&units=metric&appid=${process.env.REACT_APP_API_KEY}`
-          )
-          .then((result) => {
-            setFiveDayForcast(result.data.list);
-            setForcastLoading(false);
-          })
-          .catch((err) => {});
-      }
-    );
+    // navigator.geolocation.getCurrentPosition(
+    // async (position) => {
+    //   const { latitude, longitude } = position.coords;
+    //   //Sets to users location
+    //   axios
+    //     .get(
+    //       `${process.env.REACT_APP_API_BASE}weather?lat=${latitude}&lon=${longitude}&units=metric&appid=${process.env.REACT_APP_API_KEY}`
+    //     )
+    //     .then((result) => {
+    //       setCurrentWeather(result.data);
+    //       setCurrentLoading(false);
+    //     })
+    //     .catch((err) => {});
+    //   axios
+    //     .get(
+    //       `${process.env.REACT_APP_API_BASE}forecast?lat=${latitude}&lon=${longitude}&units=metric&appid=${process.env.REACT_APP_API_KEY}`
+    //     )
+    //     .then((result) => {
+    //       setFiveDayForcast(result.data.list);
+    //       setForcastLoading(false);
+    //     })
+    //     .catch((err) => {});
+    // },
+    // (err) => {
+    //   //otherwise default to calgary
+    //   axios
+    //     .get(
+    //       `${process.env.REACT_APP_API_BASE}weather?q=calgary&units=metric&appid=${process.env.REACT_APP_API_KEY}`
+    //     )
+    //     .then((result) => {
+    //       setCurrentWeather(result.data);
+    //       setCurrentLoading(false);
+    //     })
+    //     .catch((err) => {});
+    //   axios
+    //     .get(
+    //       `${process.env.REACT_APP_API_BASE}forecast?q=calgary&units=metric&appid=${process.env.REACT_APP_API_KEY}`
+    //     )
+    //     .then((result) => {
+    //       setFiveDayForcast(result.data.list);
+    //       setForcastLoading(false);
+    //     })
+    //     .catch((err) => {});
+    // }
+    //);
   }, []);
 
   return (
@@ -133,20 +133,7 @@ const App = () => {
             )}
           </div>
         </div>
-        <footer>
-          <h6 className="footer-content">
-            Weather App powered by{" "}
-            <a
-              className="openweather-link"
-              rel="noopener noreferrer"
-              href="https://openweathermap.org/"
-              target="_blank"
-            >
-              OpenWeatherMap API
-            </a>
-          </h6>
-          <h6 className="footer-content">Created by Randy Aubichon</h6>
-        </footer>
+        <Footer />
       </div>
     </>
   );
