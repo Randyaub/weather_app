@@ -102,35 +102,16 @@ const App = () => {
                 </div>
               </div>
             </div>
-            {loadingCurrent === false && loadingForcast === false ? (
-              <section className="main-container">
-                {typeof currentWeather.main != "undefined" ? (
-                  <WeatherCurrently currentWeather={currentWeather} />
-                ) : (
-                  ""
-                )}
-              </section>
-            ) : (
-              <section className="main-container loading">
-                <img className="loading" src="loading.svg" alt="loading"></img>
-              </section>
-            )}
+            <WeatherCurrently
+              currentWeather={currentWeather}
+              loadingCurrent={loadingCurrent}
+              loadingForcast={loadingForcast}
+              currentWeather={currentWeather}
+            />
           </div>
           <br />
           <div className="container-wrapper">
-            {loadingCurrent === false && loadingForcast === false ? (
-              <section>
-                {typeof fiveDayForcast[0] != "undefined" ? (
-                  <Forcast fiveDayForcast={fiveDayForcast} />
-                ) : (
-                  ""
-                )}
-              </section>
-            ) : (
-              <section className="forcast-loading">
-                <img className="loading" src="loading.svg" alt="loading"></img>
-              </section>
-            )}
+            <Forcast fiveDayForcast={fiveDayForcast} />
           </div>
         </div>
         <Footer />
