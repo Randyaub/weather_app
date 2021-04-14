@@ -7,6 +7,7 @@ const SearchInput = (props) => {
       <input
         className="c-SearchInput__input"
         type="text"
+        name="location"
         placeholder="Search for location..."
         onChange={(e) => props.setQuery(e.target.value)}
         value={props.query}

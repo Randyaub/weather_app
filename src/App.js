@@ -42,14 +42,10 @@ const App = () => {
     //otherwise default to calgary
     axios.get(currentWeatherURL).then((result) => {
       setCurrentWeather(result.data);
-      axios
-        .get(
-          `${process.env.REACT_APP_API_BASE}forecast?q=calgary&units=metric&appid=${process.env.REACT_APP_API_KEY}`
-        )
-        .then((result) => {
-          setFiveDayForcast(result.data.list);
-          setIsLoading(false);
-        });
+      axios.get(forcastURL).then((result) => {
+        setFiveDayForcast(result.data.list);
+        setIsLoading(false);
+      });
     });
   };
 
