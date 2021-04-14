@@ -6,8 +6,10 @@ const NewsBanner = () => {
     <div className="c-NewsBanner">
       <div className="c-NewsBanner__content">
         <h6 className="c-NewsBanner__message">
-          Hover the question mark icon to the right of the search bar for more
-          information.
+          <span className="c-NewsBanner__accent">
+            HOVER THE QUESTION MARK ICON
+          </span>{" "}
+          to the right of the search bar for more information.
         </h6>
       </div>
     </div>

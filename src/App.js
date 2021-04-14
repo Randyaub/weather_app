@@ -7,7 +7,8 @@ import Forcast from "./components/Forcast";
 import Footer from "./components/Footer";
 import Loading from "./components/Loading";
 import SearchBar from "./components/SearchBar";
-import Logo from "./components/Header/Logo";
+import Logo from "./components/Logo";
+import NewsBanner from "./components/NewsBanner";
 
 const App = () => {
   const [currentWeather, setCurrentWeather] = useState({});
@@ -51,10 +52,10 @@ const App = () => {
 
   return (
     <>
-      {isLoading === false ? (
+      {!isLoading ? (
         <div className="App">
-          <div></div>
-          <div>
+          <NewsBanner />
+          <div className="content">
             <Logo />
             <div className="l-App__current">
               <SearchBar

@@ -22,6 +22,7 @@
 .c-ForcastDaySummary .unit {
   position: absolute;
   top: 5px;
+  margin-left: 3px;
 }
 
 .c-ForcastDaySummary__date {
@@ -38,5 +39,5 @@
 }
 
 .c-ForcastDaySummary__image {
-  height: 84px;
+  height: 85px;
 }

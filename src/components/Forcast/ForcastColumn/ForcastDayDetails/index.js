@@ -1,20 +1,25 @@
 import React from "react";
-import "./ForcastDayDetails.css";
-
 import { hPatoKpa, direction } from "../../../../utils/utils";
 import ForcastRow from "./ForcastRow";
 
-const ForcastDayDetails = (props) => {
+const ForcastDayDetails = ({ day }) => {
+  //Specific details of the day
   const details = [
-    { value: Math.round(props.day.main.feels_like), secondary: "°C" },
-    { value: Math.round(props.day.pop * 100), secondary: "%" },
+    //Feels Like
+    { value: Math.round(day.main.feels_like), secondary: "°C" },
+    //Propability of Precipitation
+    { value: Math.round(day.pop * 100), secondary: "%" },
+    //Wind Speed
     {
-      value: Math.round(props.day.wind.speed),
-      secondary: direction(props.day.wind.deg),
+      value: Math.round(day.wind.speed),
+      secondary: direction(day.wind.deg),
     },
-    { value: props.day.clouds.all, secondary: "%" },
-    { value: Math.round(props.day.main.humidity), secondary: "%" },
-    { value: hPatoKpa(props.day.main.pressure), secondary: "kPa" },
+    //Cloudiness
+    { value: day.clouds.all, secondary: "%" },
+    //Humidity
+    { value: Math.round(day.main.humidity), secondary: "%" },
+    //Pressure
+    { value: hPatoKpa(day.main.pressure), secondary: "kPa" },
   ];
 
   return (
@@ -25,7 +30,6 @@ const ForcastDayDetails = (props) => {
             key={index}
             value={detail.value}
             secondary={detail.secondary}
-            className="c-ForcastDayDetails"
           />
         );
       })}

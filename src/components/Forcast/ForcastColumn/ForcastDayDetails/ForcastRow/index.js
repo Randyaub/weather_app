@@ -1,11 +1,11 @@
 import React from "react";
 import "./ForcastRow.css";
 
-const ForcastRow = (props) => {
+const ForcastRow = ({ value, secondary }) => {
   return (
-    <div className={props.className}>
-      <span>{props.value}</span>
-      <span className="c-ForcastRow__secondary">{props.secondary}</span>
+    <div className="c-ForcastRow">
+      <span>{value}</span>
+      <span className="c-ForcastRow__secondary">{secondary}</span>
     </div>
   );
 };

@@ -7,7 +7,6 @@ const Footer = () => {
       <h6 className="c-Footer__message">
         Weather App powered by{" "}
         <a
-          className="link"
           rel="noopener noreferrer"
           href="https://openweathermap.org/"
           target="_blank"

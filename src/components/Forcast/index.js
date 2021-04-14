@@ -5,18 +5,19 @@ import ForcastColumn from "./ForcastColumn";
 import "./Forcast.css";
 import ForcastLegend from "./ForcastLegend";
 
-const Forcast = (props) => {
+const Forcast = ({ fiveDayForcast, isLoading }) => {
+  //API returns an array of objects
   const days = [
-    props.fiveDayForcast[6],
-    props.fiveDayForcast[14],
-    props.fiveDayForcast[22],
-    props.fiveDayForcast[30],
-    props.fiveDayForcast[38],
+    fiveDayForcast[6],
+    fiveDayForcast[14],
+    fiveDayForcast[22],
+    fiveDayForcast[30],
+    fiveDayForcast[38],
   ];
 
   return (
-    props.isLoading === false &&
-    typeof props.fiveDayForcast[0] != "undefined" && (
+    !isLoading &&
+    typeof fiveDayForcast[0] != "undefined" && (
       <section className="c-Forcast">
         <h4 className="c-Forcast__title">Next 5 Days</h4>
         <div className="l-Forcast">

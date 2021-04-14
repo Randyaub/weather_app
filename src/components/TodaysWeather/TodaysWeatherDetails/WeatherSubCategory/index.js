@@ -1,19 +1,19 @@
 import React from "react";
 import "./WeatherSubCategory.css";
 
-const WeatherDetails = (props) => {
+const WeatherDetails = ({ label, value, vector, units }) => {
   return (
     <div className="c-WeatherDetails">
-      <span className="c-WeatherDetails__label">{props.label}</span>
-      <span className="c-WeatherDetails__value">{props.value}</span>
+      <span className="c-WeatherDetails__label">{label}</span>
+      <span className="c-WeatherDetails__value">{value}</span>
       <div className="c-WeatherDetails__units">
-        {props.vector ? (
+        {vector ? (
           <>
-            <span className="vector">{props.vector}</span>
-            <span className="metric">{props.units}</span>
+            <span className="vector">{vector}</span>
+            <span className="metric">{units}</span>
           </>
         ) : (
-          <span className="metric">{props.units}</span>
+          <span className="metric">{units}</span>
         )}
       </div>
     </div>

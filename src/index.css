@@ -22,6 +22,6 @@ body {
   color: white;
 }
 
-.link {
+a {
   color: var(--third-color);
 }

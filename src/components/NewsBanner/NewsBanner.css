@@ -12,3 +12,7 @@
   font-size: 13px;
   font-weight: 500;
 }
+
+.c-NewsBanner__accent {
+  color: var(--third-color);
+}

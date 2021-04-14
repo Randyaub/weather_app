@@ -5,16 +5,16 @@ import Location from "./Location";
 import TodaysTemperature from "./TodaysTemperature";
 import TodaysWeatherDetails from "./TodaysWeatherDetails";
 
-const TodaysWeather = (props) => {
+const TodaysWeather = ({ currentWeather, isLoading }) => {
   return (
-    props.isLoading === false &&
-    typeof props.currentWeather.main != "undefined" && (
+    !isLoading &&
+    typeof currentWeather.main != "undefined" && (
       <section className="c-TodaysWeather">
         <div>
-          <Location currentWeather={props.currentWeather} />
+          <Location currentWeather={currentWeather} />
           <div className="l-TodaysWeather">
-            <TodaysTemperature currentWeather={props.currentWeather} />
-            <TodaysWeatherDetails currentWeather={props.currentWeather} />
+            <TodaysTemperature currentWeather={currentWeather} />
+            <TodaysWeatherDetails currentWeather={currentWeather} />
           </div>
         </div>
       </section>

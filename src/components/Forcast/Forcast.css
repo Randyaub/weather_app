@@ -7,7 +7,6 @@
 .l-Forcast {
   display: flex;
   text-align: center;
-  flex-basis: 0;
 }
 
 .c-Forcast__title {

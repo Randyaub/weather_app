@@ -4,11 +4,11 @@ import "./ForcastColumn.css";
 import ForcastDayDetails from "./ForcastDayDetails";
 import ForcastDaySummary from "./ForcastDaySummary";
 
-const ForcastColumn = (props) => {
+const ForcastColumn = ({ day }) => {
   return (
     <div className="c-ForcastColumn">
-      <ForcastDaySummary day={props.day} />
-      <ForcastDayDetails day={props.day} />
+      <ForcastDaySummary day={day} />
+      <ForcastDayDetails day={day} />
     </div>
   );
 };
