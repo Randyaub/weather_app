@@ -1,23 +1,21 @@
 # Weather-App
 
-This project retrieves data from the OpenWeatherMap API and displays the information in a pleasing way.
+The Weather-App project requests data from the OpenWeatherMap's API and displays the response data in a visaully pleasing way. The website is called the Weather App. However, the website doesnt work on phones like an app implies. I did not add responsivness because I wanted to replicated a design that wasnt intended to be resized.
 
-[The Website Link](https://naughty-hugle-69c260.netlify.app/)
+[Link To Weather-App Site](https://naughty-hugle-69c260.netlify.app/)
 
 ## Motivation
 
-I was motivated to create this App because of the design of The [Weather Networks 7 Days column](https://www.theweathernetwork.com/ca/weather/alberta/calgary).
-I decided I wanted to try to make a similar looking design with whatever data the OpenWeatherMap APi provided.
+I became motivated to create this websites from viewing the design of The [Weather Networks - 7 Days Forcast column](https://www.theweathernetwork.com/ca/weather/alberta/calgary).
+I decided I wanted to try to make a similar looking design with whatever data the OpenWeatherMap API provided.
 
 ## Tech/Framework/Modules/API's
 
 ### Frameworks
 -React
--Express
 
 ### Tech
--Node.js
--Javascript
+-JavaScript
 -HTML5/CSS3
 
 ### Modules
@@ -31,8 +29,8 @@ I decided I wanted to try to make a similar looking design with whatever data th
 The App has three main features as follows.
 
 -The app will prompt the user for their location. If declined the app will default to Calgary. Otherwise the
-app will display their locations weather and forcast.
+app will display their current locations weather and 5 day forcast.
 
--The App displays the current days weather. Including stats like the current weather, feels like, wind, air pressure etc.
+-The App displays the current days weather. Including weather details like the current temperature, what the weather feels like, wind and air pressure etc.
 
--The App will also display the forcast for the next five days and their predicted temperatures.
+-The App will also display the forcast for the next five days and the predicted temperatures.
